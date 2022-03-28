@@ -2,7 +2,7 @@
 
 # Catalog-Of-My-Things
 
-> This project is made as part of the Microverse curriculum block 4 module 4 Group Capstone Project. "Catalog of my things" is a simple console app that allows users to manage collections of the things: Books, Music Albums, Movies, and Games.
+> This project is made as part of the Microverse curriculum block 4 module 5 Group Capstone Project. "Catalog of my things" is a simple console app that allows users to manage collections of the things: Books, Music Albums, Movies, and Games.
 
 ## Built With
 
