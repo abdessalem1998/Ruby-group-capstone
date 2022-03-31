@@ -26,19 +26,19 @@ class App
     when '2'
       p 'TODO: all music albums method'
     when '3'
-      p 'TODO: all games method'
+      @app.list_all_games
     when '4'
       p 'TODO: all genre method'
     when '5'
       p 'TODO: all label method'
     when '6'
-      p 'TODO: all authors method'
+      @app.list_all_authors
     when '7'
       p 'TODO: add a book method'
     when '8'
       p 'TODO: add a music album'
     when '9'
-      p 'TODO: add a game method'
+      add_new_game_details
     when '10'
       puts 'Exiting the application...'
       sleep 2
