@@ -1,5 +1,4 @@
 require_relative './item'
-require 'date'
 
 class Game < Item
   attr_accessor :multiplayer, :last_played_at, :game_name
@@ -12,8 +11,10 @@ class Game < Item
   end
 
   def can_be_archived?
-    now = Date.now
-    time_elapsed = (now - last_played_at).to_i
-    super() and (time_elapsed > 2.year)
+    bool = super
+    now_year = Time.new.year
+    year_last_played = @last_played_at.year
+    archive = now_year - year_last_played
+    archive && bool
   end
 end

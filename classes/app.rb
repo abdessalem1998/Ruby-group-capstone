@@ -119,7 +119,7 @@ class App
   end
 
   def add_author(new_author)
-    new_author_instance = Author.new(first_name, last_name)
+    new_author_instance = Author.new(*new_author)
     hash = {
       'first_name' => new_author_instance.first_name,
       'last_name' => new_author_instance.last_name
