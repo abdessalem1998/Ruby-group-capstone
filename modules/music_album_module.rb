@@ -12,4 +12,15 @@ module Music
       end
     end
   end
+
+  def display(albums)
+    if albums.length.zero?
+      puts "\nThere are no albums in the Catalog-of-my-things. You can create a book from the main menu."
+    else
+      puts "\nHere are all the albums in the Catalog-of-my-things:"
+      albums.each_with_index do |album, index|
+        puts "#{index + 1}. name: #{album.name}, publish_date: #{album.publish_date}"
+      end
+    end
+  end
 end

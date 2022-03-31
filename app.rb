@@ -29,7 +29,7 @@ class App
     when 1
       puts 'List all books'
     when 2
-      puts 'retrieve_music_albums'
+      display(@music_albums)
     when 3
       puts 'List all movies'
     when 4
