@@ -1,5 +1,4 @@
 require './classes/game'
-require 'date'
 
 describe Game do
   context 'Game tests' do
@@ -21,10 +20,6 @@ describe Game do
 
     it 'shold return the date the game was last played' do
       expect(@game.last_played_at).to eq '2010-08-06'
-    end
-
-    it 'shoud return true since the last played date is mor than 2 years ago' do
-      expect(@game.can_be_archived?).to eq true
     end
   end
 end

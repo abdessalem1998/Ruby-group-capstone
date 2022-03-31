@@ -1,6 +1,15 @@
-class App
+require './classes/app'
+require './modules/book_module'
+require_relative './modules/music_album_module'
+require './modules/game_module'
+
+class Main
+  include BookModule
+  include MusicAlbumModule
+  include GameModule
+
   def initialize
-    # Add arrays later on
+    @app = App.new
   end
 
   def menu
@@ -22,27 +31,30 @@ class App
     user_input = gets.chomp
     case user_input
     when '1'
-      p 'TODO: all books method'
+      @app.list_all_books
     when '2'
-      p 'TODO: all music albums method'
+      @app.list_all_albums
     when '3'
       @app.list_all_games
     when '4'
-      p 'TODO: all genre method'
+      @app.list_all_genres
     when '5'
-      p 'TODO: all label method'
+      @app.list_all_labels
     when '6'
       @app.list_all_authors
     when '7'
-      p 'TODO: add a book method'
+      add_new_book_details
     when '8'
-      p 'TODO: add a music album'
+      add_new_album_details
     when '9'
       add_new_game_details
     when '10'
+      @app.preserve_files
       puts 'Exiting the application...'
       sleep 2
       exit
+    else
+      puts "\nERROR: Invalid option. Please select a digit from (1-10)\n"
     end
   end
 
@@ -51,16 +63,11 @@ class App
 
     puts 'Welcome to the catalog of my things'
 
-    while user_input != '7'
+    while user_input != '10'
       menu
       handle_menu_selection
     end
   end
 end
 
-def main
-  app = App.new
-  app.run
-end
-
-main
+Main.new.run

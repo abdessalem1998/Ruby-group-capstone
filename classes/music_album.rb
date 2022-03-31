@@ -1,18 +1,18 @@
-require_relative 'item'
+require_relative './item'
 
 class MusicAlbum < Item
-  attr_accessor :on_spotify, :archived, :name
-  attr_reader :publish_date
+  attr_accessor :on_spotify, :name
+  attr_reader :items
 
-  def initialize(name, publish_date, on_spotify)
-    super(id: nil, publish_date: publish_date)
-    @name = name
+  def initialize(on_spotify, name, publish_date)
+    super(publish_date)
+    @id = Random.rand(1..1000)
     @on_spotify = on_spotify
+    @name = name
+    @items = []
   end
 
-  private
-
-  def can_be_archived?
-    archived && @on_spotify
+  def can_be_archived?()
+    super && @on_spotify
   end
 end
