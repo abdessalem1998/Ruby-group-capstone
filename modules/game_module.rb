@@ -16,7 +16,7 @@ module GameModule
     multiplayer = multiplayer == 'Y' || true
 
     @app.add_game([game_name, last_played_at, multiplayer, publish_date])
-    
+
     puts "\nNew Game Added!"
     puts "\n-------------------------------"
   end
