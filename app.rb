@@ -1,7 +1,10 @@
+require './modules/music_album_module'
+require './classes/music_album'
+
 class App
-
+  include Music
   def initialize
-
+    @music_albums = retrieve_music_albums
   end
 
   def print_start_message
@@ -26,7 +29,7 @@ class App
     when 1
       puts 'List all books'
     when 2
-      puts 'List all music albums'
+      puts 'retrieve_music_albums'
     when 3
       puts 'List all movies'
     when 4
@@ -53,7 +56,7 @@ class App
   end
 
   def start
-    puts 'Welcome to our school library app!'
+    puts 'Welcome to our Catalog of my things App!'
     loop do
       print_start_message
 
