@@ -1,10 +1,15 @@
 require './modules/music_album_module'
 require './classes/music_album'
+require './modules/genre_module'
+require './classes/genre'
 
 class App
   include Music
+  include GenreModule
   def initialize
     @music_albums = retrieve_music_albums
+    @genre = retrieve_genre
+    puts @genre
   end
 
   def print_start_message
