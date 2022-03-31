@@ -45,7 +45,7 @@ class App
     when 9
       puts 'Add a book'
     when 10
-      puts 'Add a music album'
+      create
     when 11
       puts 'Add a movie'
     when 12
