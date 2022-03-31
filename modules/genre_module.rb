@@ -28,7 +28,7 @@ module GenreModule
     puts "\nCreate a new music album"
     print "\nEnter music_album's title: "
     title = gets.chomp
-    print "Enter publish_date(yyyy-mm-dd): "
+    print 'Enter publish_date(yyyy-mm-dd): '
     date = gets.chomp
     @music_albums.push(MusicAlbum.new(title, date, false))
     save
@@ -37,7 +37,7 @@ module GenreModule
 
   def save
     albums_obj = @music_albums.map do |album|
-      { name: album.name, publish_date: album.publish_date,on_spotify: album.on_spotify }
+      { name: album.name, publish_date: album.publish_date, on_spotify: album.on_spotify }
     end
     albums_json = JSON.generate(albums_obj)
     save_file('data/music_albums.json', albums_json)
@@ -49,5 +49,4 @@ module GenreModule
     file.puts(json)
     file.close
   end
-
 end

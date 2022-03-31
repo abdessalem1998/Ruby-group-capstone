@@ -74,5 +74,4 @@ class App
       execute(option)
     end
   end
-
 end
