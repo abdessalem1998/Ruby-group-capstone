@@ -1,4 +1,4 @@
-require_relative '../item'
+require_relative './classes/item'
 
 describe Item do
   context 'When testing Item' do
