@@ -13,13 +13,13 @@ module GenreModule
     end
   end
 
-  def display(albums)
-    if albums.length.zero?
-      puts "\nThere are no albums in the Catalog-of-my-things. You can create a book from the main menu."
+  def display_genre(genres)
+    if genres.length.zero?
+      puts "\nThere are no genres in the Catalog-of-my-things!"
     else
-      puts "\nHere are all the albums in the Catalog-of-my-things:"
-      albums.each_with_index do |album, index|
-        puts "#{index + 1}. name: #{album.name}, publish_date: #{album.publish_date}"
+      puts "\nHere are all the genres in the Catalog-of-my-things:"
+      genres.each_with_index do |genre, index|
+        puts "#{index + 1}. name: #{genre.name}"
       end
     end
   end

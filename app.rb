@@ -9,7 +9,6 @@ class App
   def initialize
     @music_albums = retrieve_music_albums
     @genre = retrieve_genre
-    puts @genre
   end
 
   def print_start_message
@@ -40,7 +39,7 @@ class App
     when 4
       puts 'List of games'
     when 5
-      puts 'List all genres'
+      display_genre(@genre)
     when 6
       puts 'List all labels'
     when 7
