@@ -118,7 +118,7 @@ class App
     @games << hash
   end
 
-  def add_author(_new_author)
+  def add_author(new_author)
     new_author_instance = Author.new(first_name, last_name)
     hash = {
       'first_name' => new_author_instance.first_name,
