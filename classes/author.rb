@@ -1,16 +1,16 @@
-require './item'
-require 'date'
+class Author
+  attr_accessor :first_name, :last_name, :last_played_at
+  attr_reader :items
 
-class Game
+  def initialize(first_name, last_name, _last_played_at)
+    @id = Random.rand(1..1000)
+    @first_name = first_name
+    @last_name = last_name
+    @items = []
+  end
 
-    def initialize(multiplayer, last_played_at)
-        @multiplayer = multiplayer
-        @last_played_at = last_played_at
-    end
-
-    def can_be_archived?
-        now = Date.now
-        timeElapsed = (now - last_played_at).to_i
-        super() and (timeElapsed > 2.year)
-    end
+  def add_item(new_item)
+    @item << new_item
+    new_item.author = self
+  end
 end
