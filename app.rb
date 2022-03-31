@@ -28,6 +28,7 @@ class App
     puts '13 - Exit'
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def execute(option)
     case option
     when 1
@@ -59,6 +60,7 @@ class App
     end
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
   def start
     puts 'Welcome to our Catalog of my things App!'
     loop do
