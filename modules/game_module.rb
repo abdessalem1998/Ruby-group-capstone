@@ -12,7 +12,7 @@ module GameModule
     last_played_at = capture_input('Input Last played date')
     multiplayer = capture_input('Is the game Multiplayer? (enter Y for "Yes" evertyhing else will be treated as "No"')
 
-    multiplayer = multiplayer == 'Y' || false
+    multiplayer = multiplayer == 'Y' || true
 
     @app.add_game([game_name, last_played_at, multiplayer])
     puts "\nNew Game Added!"

@@ -108,8 +108,8 @@ class App
     end
   end
 
-  def add_game(game_name, last_played_at, multiplayer)
-    new_game_instance = Game.new(game_name, last_played_at, multiplayer)
+  def add_game(new_game)
+    new_game_instance = Game.new(*new_game)
     hash = {
       'game_name' => new_game_instance.game_name,
       'last_played_at' => new_game_instance.last_played_at,
