@@ -57,7 +57,7 @@ class Main
       puts "\nERROR: Invalid option. Please select a digit from (1-10)\n"
     end
   end
-
+  
   def run
     user_input = nil
 
@@ -69,5 +69,3 @@ class Main
     end
   end
 end
-
-Main.new.run

@@ -65,4 +65,4 @@ CREATE TABLE Game(
   FOREIGN KEY (genre_id) REFERENCES Genre(id)
   FOREIGN KEY (author_id) REFERENCES Author(id)
   FOREIGN KEY (label_id) REFERENCES Label(id)
-);
+  
