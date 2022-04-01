@@ -1,5 +1,6 @@
 require './classes/author'
 require './classes/item'
+
 describe Author do
   context 'Author tests' do
     before :each do
