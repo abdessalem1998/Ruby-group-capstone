@@ -1,9 +1,9 @@
-require './classes/book'
+require_relative './book'
 require_relative './music_album'
 require_relative './genre'
-require './classes/label'
-require './classes/game'
-require './classes/author'
+require_relative './label'
+require_relative './game'
+require_relative './author'
 require './modules/preserver_module'
 
 class App
