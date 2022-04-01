@@ -43,6 +43,7 @@ class App
 
   def list_all_books
     puts "\nNote: No Books available." if @books.empty?
+
     puts "\n---------------------------------------------"
     puts "\nALL BOOKS\n\n"
     puts "\nPublisher \t| Publish Date \t| Cover State"
@@ -55,6 +56,7 @@ class App
 
   def list_all_labels
     puts "\nNote: No Label available." if @labels.empty?
+
     puts "\n----------------------------"
     puts "\nALL LABELS\n\n"
     puts "\nLabels \t| Color"
@@ -69,21 +71,25 @@ class App
     new_album_instance = MusicAlbum.new(on_spotify, album_name, publish_date)
     new_genre_instance = Genre.new(genre_name)
     new_album_instance.genre = new_genre_instance
+
     hash = {
       'album_name' => new_album_instance.name,
       'publish_date' => new_album_instance.publish_date,
       'on_spotify?' => new_album_instance.on_spotify,
       'genre' => new_genre_instance.name
     }
+
     genre_hash = {
       'genre_name' => new_genre_instance.name
     }
+
     @albums << hash
     @genres << genre_hash
   end
 
   def list_all_albums
     puts "\nNote: No albums available." if @albums.empty?
+
     puts "\n----------------------------"
     puts "\nALL ALBUMS\n\n"
     puts "\Genre \t| On spotify? \t| Album Name \t| Publish Date"
@@ -98,6 +104,7 @@ class App
 
   def list_all_genres
     puts "\nNote: No genres available." if @genres.empty?
+
     puts "\n----------------------------"
     puts "\nALL GENRES\n\n"
     puts "\Name"
