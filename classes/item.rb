@@ -33,6 +33,9 @@ class Item
   private
 
   def can_be_archived?
-    (Time.now.year - @publish_date.year) > 10
+    current = Date.today
+
+    difference_in_days = (current - @publish_date).to_i
+    (difference_in_days / 365.25) > 10
   end
 end
