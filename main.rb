@@ -69,5 +69,3 @@ class Main
     end
   end
 end
-
-Main.new.run

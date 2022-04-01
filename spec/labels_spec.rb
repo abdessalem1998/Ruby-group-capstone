@@ -31,4 +31,3 @@ describe Label do
     end
   end
 end
-
