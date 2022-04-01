@@ -1,16 +1,16 @@
 class Label
-  attr_accessor :title, :color
-  attr_reader :id, :item
+  attr_accessor :id, :title, :color
+  attr_reader :items
 
   def initialize(title, color)
-    @id = Random.rand(1..100.0)
+    @id = Random.rand(1..1000)
     @title = title
     @color = color
-    @item = []
+    @items = []
   end
 
-  def add_item(item)
-    @item.push(item)
-    item.label = self
+  def add_item(new_item)
+    @items << new_item
+    new_item.label = self
   end
 end
