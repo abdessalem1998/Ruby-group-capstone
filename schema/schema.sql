@@ -6,7 +6,6 @@ CREATE TABLE genres (
 	PRIMARY KEY(id)
 );
 
-
 CREATE TABLE Author(
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     first_name VARCHAR(100),
@@ -66,5 +65,4 @@ CREATE TABLE Game(
   FOREIGN KEY (genre_id) REFERENCES Genre(id)
   FOREIGN KEY (author_id) REFERENCES Author(id)
   FOREIGN KEY (label_id) REFERENCES Label(id)
-);
-
+  

@@ -1,5 +1,3 @@
-require 'date'
-
 class Item
   attr_accessor :publish_date, :archived, :label, :author, :source, :genre
   attr_reader :id
@@ -38,5 +36,6 @@ class Item
 
   def move_to_archive
     @archived = true if can_be_archived? == true
+
   end
 end
