@@ -27,7 +27,7 @@ class App
     puts '12 - Add a game'
     puts '13 - Exit'
   end
-  
+
   def execute(option)
     case option
     when 1
