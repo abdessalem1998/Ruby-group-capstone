@@ -13,6 +13,7 @@ class Book < Item
     super || @cover_state == 'bad'
   end
 end
+
 module BookModule
   def capture_input(request_text)
     print "#{request_text}: "
